@@ -2,6 +2,9 @@ import pygame
 import sys
 
 #hello
+
+
+
 size = width, height = 800, 600
 black = 0, 0, 0
 
