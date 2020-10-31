@@ -29,6 +29,13 @@ def main():
     screen = pygame.display.set_mode(size)
     game_over = False
 
+    vx = 5
+    vy = 5
+    px = 400
+    py = 300
+
+    i = 0
+
     while not game_over:
         # обработка событий
         for event in pygame.event.get():
@@ -37,11 +44,13 @@ def main():
 
         # Логика работы
         # тут
-
+        px += i * vx
+        py += i * vy
+        i += 1
         # Отрисовка кадра
         screen.fill(black)   # чёрный фон, рисуется первым!
 
-        drawHead(400,300, screen)
+        drawHead(px,py, screen)
         
 
         # Подтверждение отрисовки и ожидание
