@@ -42,6 +42,17 @@ def main():
             if event.type == pygame.QUIT:
                 game_over = True
 
+
+        left = x <= 250
+        right = x >= 550
+        top = y <= 250
+        bottom = y >= 350
+
+        if left or right:
+            vx = - vx
+        if top or bottom:
+            vy = - vy
+
         # Логика работы
         # тут
         px += i * vx
